@@ -4,8 +4,13 @@ Oro Sphinxdoc Integrity Check extension
 This extension allows to control content of rst document.
 It can be useful to verify that examples in documentation with `literalinclude` of the files from code are still valid.
 
+How to install
+--------------
+* Clone repository to any directory
+* Edit your sphinx `conf.py` file to add extension: `extensions = ['oro.integrity_check']` 
+
 Example of usage
-----
+----------------
 index.rst
 ```
 .. oro_integrity_check:: 207bafe71c5c3bf6530c9cf98d4f654126bdcaac
