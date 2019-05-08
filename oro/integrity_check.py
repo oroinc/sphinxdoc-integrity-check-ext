@@ -6,7 +6,7 @@ from sphinx.util.compat import Directive
 
 class OroIntegrityCheck(Directive):
     """
-
+    Class that checks hash of directive's content and compare it to the hash specified in document
     """
     required_arguments = 1
     has_content = True
@@ -22,7 +22,7 @@ class OroIntegrityCheck(Directive):
 
         env = self.state.document.settings.env
         if document_hash != node_hash:
-            env.warn_node("Node hashes are different. %s expected, but %s given" % (node_hash, document_hash), node)
+            env.warn_node('Node hashes are different. "%s" expected, but "%s" given' % (node_hash, document_hash), node)
             warning_node = self.create_warning_node()
             return [warning_node, node]
 
