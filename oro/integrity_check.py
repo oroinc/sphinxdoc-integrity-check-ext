@@ -20,9 +20,9 @@ class OroIntegrityCheck(Directive):
 
         node_hash = self.calculate_hash(node.astext())
 
-        env = self.state.document.settings.env
         if document_hash != node_hash:
-            env.warn_node('Node hashes are different. "%s" expected, but "%s" given' % (node_hash, document_hash), node)
+            message = 'Node hashes are different. "%s" expected, but "%s" given' % (node_hash, document_hash)
+            self.state.document.reporter.warning(message, line=self.lineno)
             warning_node = self.create_warning_node()
             return [warning_node, node]
 
