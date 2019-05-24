@@ -35,7 +35,6 @@ setup(
     ],
     platforms='any',
     dependency_links=[],
-    namespace_packages=['sphinxcontrib'],
     packages=find_packages(exclude=['test*']),
     include_package_data=True,
     install_requires=requirements,
