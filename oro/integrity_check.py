@@ -1,6 +1,7 @@
-from docutils import nodes
-import sphinx
 import hashlib
+
+import sphinx
+from docutils import nodes
 from sphinx.util.compat import Directive
 
 
