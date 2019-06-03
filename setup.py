@@ -13,7 +13,7 @@ It can be useful to verify that examples in documentation with literalinclude of
 
 setup(
     name='oro-sphinx-integrity-check',
-    version='0.0.2',
+    version='0.1.0',
     url='https://github.com/oroinc/sphinxdoc-integrity-check-ext',
     license='MIT',
     author='Oro Inc.',
