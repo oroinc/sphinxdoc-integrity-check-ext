@@ -1,8 +1,8 @@
 import hashlib
-
 import sphinx
+
 from docutils import nodes
-from sphinx.util.compat import Directive
+from docutils.parsers.rst import Directive
 
 
 class OroIntegrityCheck(Directive):
@@ -37,7 +37,7 @@ class OroIntegrityCheck(Directive):
         """
 
         sha1 = hashlib.sha1()
-        sha1.update(content)
+        sha1.update(content.encode('utf-8'))
         return sha1.hexdigest()
 
     def create_warning_node(self):
